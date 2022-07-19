@@ -7,7 +7,7 @@
 ## Description
 
 The purpose of this project was to create a web application from scratch. I built a portfolio page, which I will be adding to as the course progresses.
-While working on this project, I was able to apply the skills I have recently learned: flexbox, media queries and CSS variables. I tried to make the website look like the example I was given as much as possible, while having the freedom to use different 
+While working on this project, I was able to apply the skills I have recently learned: flexbox, media queries and CSS variables. I tried to make the website look like the example I was given as much as possible, while having the freedom to use different images, fonts and colors. 
 
 
 
