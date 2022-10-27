@@ -3,15 +3,18 @@
     padding: 0;
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-} /*font family for the whole website is the same*/
-
-body {
-    background-color: #c2dcea;
 }
 
-.header { 
+/*font family for the whole website is the same*/
+
+body {
+    background-color: #c2dcea; /* For browsers that do not support gradients */
+    background-image: linear-gradient(0deg, #c2dcea, #9a6ef1);
+}
+
+.header {
     padding: 15px 15px 15px 0px;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #9b55dd;
@@ -36,10 +39,10 @@ body {
 
 .header nav ul {
     list-style-type: none;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;   
+    align-items: center;
 }
 
 
@@ -52,25 +55,25 @@ a {
 }
 
 a.highlight:hover {
-    color:#9b55dd;
+    color: #9b55dd;
     background-color: white;
     padding: 3px;
 }
 
 .hero {
-    width: 100%;
     height: 225px;
     position: relative;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    background-image: url('../images/EvxICgjWQAMqIo6.jpeg');
-    background-position: center;
-    object-fit: cover;
+    background-image: url('../images/octocat.png'), url('../images/EvxICgjWQAMqIo6.jpeg');
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: contain, 100%;
 }
 
+.shadow {
+    text-shadow: 2px 2px black;
+}
 
-.bottom-right { 
+#bottom-right {
     position: absolute;
     bottom: 15px;
     right: 50px;
@@ -87,14 +90,14 @@ a.highlight:hover {
     flex-wrap: wrap;
     padding-left: 10px;
     border-left: solid#9b55dd 5px;
-    gap: 10px 10px; 
+    gap: 10px 10px;
     justify-content: space-between;
     margin-bottom: 1em;
 }
 
-p + p {
+p+p {
     margin-top: 1em;
-} 
+}
 
 
 main {
@@ -112,43 +115,52 @@ main {
     text-align: right;
 }
 
+#cocktails {
+    background-image: url("../images/Cocktails.png");
+}
+
 .big-box {
     display: flex;
     width: 100%;
     height: 300px;
     position: relative;
-    background-image: url("../images/Screen\ Shot\ 2022-08-24\ at\ 11.10.46\ PM.png");
     background-size: cover;
     background-position: center;
-    justify-content: end;
-    align-items: flex-start;
+    justify-content: start;
+    align-items: flex-end;
     border: solid white 4px
 }
-.big-box:hover { /*img becomes slightly bigger, changes opacity when the cursor hovers over*/
-    opacity: 0.7;
-    cursor:pointer;
-    transform: scale(1.01);
-  }
 
-.smaller-pics { /*grouping style code together for smaller imgs in Work section*/
+.big-box:hover {
+    /*img becomes slightly bigger, changes opacity when the cursor hovers over*/
+    opacity: 0.7;
+    /* cursor:pointer; */
+    transform: scale(1.01);
+}
+
+.smaller-pics {
+    /*grouping style code together for smaller imgs in Work section*/
     width: 49%;
     height: 150px;
     display: flex;
-    position: relative;
+    /* position: relative; */
     background-size: cover;
-    justify-content: end;
-    align-items: flex-start;
+    justify-content: start;
+    /* align-items: flex-start; */
+    align-items: flex-end;
     border: solid white 4px;
-    
-}
-.smaller-pics:hover { /*img becomes slightly bigger, changes opacity when the cursor hovers over*/
-    opacity: 0.7;
-    cursor:pointer;
-    transform: scale(1.02);
-  }
 
-#LED-Wall {
-    background-image: url("../images/01.jpeg");
+}
+
+.smaller-pics:hover {
+    /*img becomes slightly bigger, changes opacity when the cursor hovers over*/
+    opacity: 0.7;
+    /* cursor:pointer; */
+    transform: scale(1.02);
+}
+
+#Courier {
+    background-image: url("../images/courier-app.png");
 }
 
 #Calculator {
@@ -166,12 +178,12 @@ main {
 section {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .txt-in-pic {
     background-color: white;
-    color:#9b55dd;
+    color: #9b55dd;
     margin-bottom: 15px;
     padding: 5px;
 }
@@ -187,18 +199,18 @@ section {
 
 .Find-Me {
     list-style-type: none;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 20px;
-    color:#c594f3;
+    color: #c594f3;
     padding-bottom: 2em;
     margin-top: 0.8em;
 }
 
 
-  /* Header & nav bar are stacked in column and centered; section headers are positioned above contents at 992px or smaller */
-  @media screen and (max-width: 992px) {
+/* Header & nav bar are stacked in column and centered; section headers are positioned above contents at 992px or smaller */
+@media screen and (max-width: 992px) {
     .header {
         flex-direction: column;
         text-align: center;
@@ -221,7 +233,7 @@ section {
         border-left: none;
     }
 
-    .smaller-pics{
+    .smaller-pics {
         width: 49%;
         display: flex;
         flex-wrap: wrap;
@@ -231,40 +243,42 @@ section {
         flex-direction: column;
         padding-right: 45px;
         padding-left: 45px;
-   }
-   .container-header {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    border-bottom: solid#9b55dd 5px;
-   }
-} 
-  
+    }
+
+    .container-header {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: solid#9b55dd 5px;
+    }
+}
+
 
 
 /* Images are stacked in a column; items in Contac Me are also stacked in a column at 768px or smaller */
-  @media screen and (max-width: 768px) {
-    .smaller-pics{
+@media screen and (max-width: 768px) {
+    .smaller-pics {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
-    
+
     .Find-Me {
-    flex-direction: column;
-    align-items: flex-start;
-    
+        flex-direction: column;
+        align-items: flex-start;
+
     }
 
-.hero {
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    align-items: center;
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        align-items: center;
+    }
+
+    #bottom-right {
+        flex-direction: row;
+        align-items: center;
+    }
+
 }
-    .bottom-right {
-    flex-direction: row;
-    align-items: center;
-    }
-
-  }
